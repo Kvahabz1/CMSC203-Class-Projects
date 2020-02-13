@@ -39,8 +39,7 @@ public class ClassDemo {
 		System.out.println(num);
 		System.out.println(d);
 		
-		d = new Person("Kim", 4);
-		System.out.println(d);
+		 
 
 		input.close();
 	}
