@@ -1,49 +1,60 @@
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-public class PersonTest {
-	Person p1,p2,p3;
-	@Before
-	public void setUp() throws Exception {
-		p1 = new Person ();
-		p2 = new Person ("Amy",  44, 20);
-		p3 = new Person ("Kim");
+class PersonTest {
+
+	Person p1, p2, p3;
+	
+	@BeforeEach
+	void setUp() throws Exception {
+		
+		p1 = new Person();
+		p2 = new Person("Martha");
+		p3 = new Person("Lois", 30, 25.50);
+		
 	}
 
-	@After
-	public void tearDown() throws Exception {
-		p1= p2 = p3 = null;
+	@AfterEach
+	void tearDown() throws Exception {
+		p1 = p2 = p3 = null;
 	}
 
-	 
 	@Test
-	public void testPersonString() {
-		String p1ToStr,p2ToStr;
-		p1ToStr= "The person's name is noname and their age is 1";
-		p2ToStr= "The person's name is Amy and their age is 44";
-	 
-		assertTrue(p1ToStr.equals(p1.toString()));
-		assertTrue(p2ToStr.equals(p2.toString()));
+	void testGetName() {
+		assertEquals(p1.getName(), "noname");
+		p1.setName("Kate");
+		assertEquals(p1.getName(), "Kate");
 	}
 
- 	@Test
-	public void testHaveBirthday() {
- 		p1.HaveBirthday();
- 		p1.HaveBirthday();
- 		assertEquals(3,p1.getAge());
- 		p2.HaveBirthday();
- 		assertEquals(45,p2.getAge());
+	@Test
+	void testGetAge() {
+		assertEquals(p1.getAge(), 1);
+		p1.setAge(27);
+		assertEquals(p1.getAge(), 27);
 	}
- 	
- 	@Test
-	public void testIncreaseWAge() {
- 		p1.increaseWage(5);
- 	  	assertEquals(10.5,p1.getWage() ,.01);
- 		p2.increaseWage(3);
- 	  	assertEquals(20.6, p2.getWage(),.01);
+
+	@Test
+	void testGetWage() {
+		assertEquals(p1.getWage(), 10.0);
+		p1.setWage(300.75);
+		assertEquals(p1.getWage(), 300.75);
+	}
+
+	@Test
+	void testHaveBirthday() {
+		assertEquals(p3.getAge(), 30);
+		p3.HaveBirthday();
+		assertEquals(p3.getAge(), 31);
+	}
+
+	@Test
+	void testIncreaseWage() {
+		assertEquals(p3.getWage(), 25.5);
+		p3.increaseWage(25.35);
+		assertEquals(p3.getWage(), 31.96, 0.01);
 	}
 
 }
