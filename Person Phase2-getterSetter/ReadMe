@@ -1,0 +1,21 @@
+1. In Person class modify the fields name and age to be private
+2. In Person class define four new methods:
+      public void setName(String name) {
+          this.name = name;
+      }
+      public String getName() {
+          return name;
+      }
+      public void setAge(int age) {
+          this.age = age;
+      }
+      public int getAge() {
+          return age;
+      }
+3. These are called setters and getters
+      Setters are used to set the value of a class field
+      Getters are used to retrieve the value of a class field
+4. Back in PersonDemo change name of a by using its setter method and passing the String "Bob" as an argument
+5. Print the value of name by passing the getter method as an argument to S.O.P.
+6. Change the age of a using its setter method and passing the int argument 21
+7. Print the value of age
