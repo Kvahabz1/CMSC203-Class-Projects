@@ -1,0 +1,23 @@
+1. Create class Person that does not have a main method
+2. Add two fields - 
+      String variable named name
+      Integer variable named age
+3. Create class PersonDemo that has a main method
+4. In main method create variable a of type Person like so:
+      "Person a = new Person();
+      (We will explain later what the significance of this statement is)
+5. Assign a string "Bob" to the name field of a
+6. Assign integer 25 to age field of a
+7. In main create another variable b of type Person as we did in Step 4
+8. Assign string "Mary" to name field of b
+9. Assign integer 35 to age field of b
+10. Back in Person class define two methods:
+       public void SayName() {
+          System.out.println("My name is " + name + " and my age is " + age);
+       }
+       public void HaveBirthday() {
+          age++;
+       }
+11. Back in PersonDemo class, invoke SayName method and HaveBirthday method using a
+12. Invoke SayName and HaveBirthday method using b
+13. Invoke SayName for a and then for b (notice their ages have changed)
