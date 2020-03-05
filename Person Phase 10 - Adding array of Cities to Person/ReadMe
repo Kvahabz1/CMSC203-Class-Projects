@@ -1,0 +1,13 @@
+Components added to Person class:
+1.	Add String array citiesLivedIn
+2.	Create constant field DEFAULT_SIZE set to 5
+3.	Add getter methods for new attributes
+4.	Add method addCity that takes a parameter for the name of the city and adds it to the citiesLivedIn array
+  -	If array is full, discard parameter silently (do nothing)
+5.	Add no-arg method citiesLivedIn that returns a String containing name of every city from array (separated by a space)
+
+Components added to ClassDemo:
+1. Added fields for city name, city count
+2. Loop to read in city strings and add them to class array
+  - Loops until user indicates they are done or array capacity has been reached
+3. Print statement with all cities passed by user
